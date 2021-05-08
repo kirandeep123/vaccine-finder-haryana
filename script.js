@@ -22,9 +22,11 @@ const checkSessions = (centers) => {
       if(session.available_capacity) {
         console.log(`${session.available_capacity}  vaccine slots available in ${center.address}` );
         document.getElementById("demo").innerHTML = `${session.available_capacity}  vaccine slots available in ${center.name}`;
+        document.getElementById("address").innerHTML = `address : ${center.address}`
+        document.getElementById("fee_type").innerHTML =`Any Fees : ${center.fee_type}`;
       }
       else{
-        console.log('session not available');
+        document.getElementById("demo").innerHTML = `Vaccine not available anywhere`;
       }
     }
   }
