@@ -21,7 +21,7 @@ const checkSessions = (centers) => {
     for(let session of center.sessions) {
       if(session.available_capacity) {
         console.log(`${session.available_capacity}  vaccine slots available in ${center.address}` );
-        document.getElementById("demo").innerHTML = `${session.available_capacity}  vaccine slots available in ${center.address}`;
+        document.getElementById("demo").innerHTML = `${session.available_capacity}  vaccine slots available in ${center.name}`;
       }
       else{
         console.log('session not available');
