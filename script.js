@@ -2,9 +2,8 @@
 let slots = 0;
 let address = '';
 const fetchByPincode = () =>  {
-  //sendEmail();
-  //console.log('fetch by pin code');
-  fetch("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=132116&date='08-05-2021'")
+  const date = moment().format('DD-MM-YYYY');
+  fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=132116&date=${date}`)
   .then(response => response.json()).
   then(data=> {
     console.log(data);
